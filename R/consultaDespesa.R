@@ -117,6 +117,9 @@ consultaDespesa_fields <- function(){
 #'
 #' An util that gets the child of all itens.
 #'
+#' @param itens itens xml_nodeset.
+#' @param child name of the field to get
+#'
 get_child <- function(itens, child){
   itens %>% xml_child(sprintf("d1:%s", child)) %>% xml_text()
 }
@@ -124,6 +127,8 @@ get_child <- function(itens, child){
 #' to_numeric
 #'
 #' An utility function to parse text to numeric.
+#'
+#' @param x convert x to numeric
 #'
 to_numeric <- function(x){
   readr::parse_number(x, locale = readr::locale(decimal_mark = ","))
