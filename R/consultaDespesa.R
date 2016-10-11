@@ -1,17 +1,19 @@
-#' consultaDespesa
+#' consultaDespesa Get
+#'
+#' Get data from the webservice.
 #'
 #' @param ano ano
 #' @param codigoOrgao codigoOrgao
 #'
 #' @examples
 #' \dontrun{
-#' consulta <- consultaDespesa(ano = 2016, codigoOrgao = "42000")
+#' consulta <- consultaDespesa_get(ano = 2016, codigoOrgao = "42000")
 #' # You can save the result to a xml file using:
-#' consultaDespesa(ano = 2016, codigoOrgao = "42000", httr::write_disk("file.xml"))
+#' consultaDespesa_get(ano = 2016, codigoOrgao = "42000", httr::write_disk("file.xml"))
 #' }
 #'
 #' @export
-consultaDespesa <- function(ano, codigoOrgao = "Consolidado", ...){
+consultaDespesa_get <- function(ano, codigoOrgao = "Consolidado", ...){
   httr::POST(
     url = "https://webservices.fazenda.sp.gov.br/WSTransparencia/TransparenciaServico.asmx?",
     httr::add_headers(SOAPAction= "http://fazenda.sp.gov.br/wstransparencia/ConsultarDespesas",
@@ -29,7 +31,6 @@ consultaDespesa <- function(ano, codigoOrgao = "Consolidado", ...){
 #' @param ano ano
 #' @param codigoOrgao codigoOrgao
 #'
-#' @export
 consultaDespesa_body <- function(ano, codigoOrgao = "Consolidado"){
   paste0(
     '<?xml version="1.0" encoding="utf-8"?>
