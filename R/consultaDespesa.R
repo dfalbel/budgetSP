@@ -98,7 +98,7 @@ consultaDespesa_parse <- function(xml){
   fields <- consultaDespesa_fields()
   dados <- purrr::map_df(fields, ~get_child(itens, .x))
   dados <- dados[-nrow(dados),]
-  dados <- dplyr::mutate_at(dados, dplyr::starts_with("Valor"), to_numeric)
+  dados <- dplyr::mutate_at(dados, dplyr::vars(dplyr::starts_with("Valor")), to_numeric)
 
   return(dados)
 }
