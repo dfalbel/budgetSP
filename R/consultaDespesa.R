@@ -4,6 +4,7 @@
 #'
 #' @param ano ano
 #' @param codigoOrgao codigoOrgao
+#' @param ... other arguments passed to httr::POST.
 #'
 #' @examples
 #' \dontrun{

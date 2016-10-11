@@ -10,6 +10,8 @@ consultaDespesa_get(ano, codigoOrgao = "Consolidado", ...)
 \item{ano}{ano}
 
 \item{codigoOrgao}{codigoOrgao}
+
+\item{...}{other arguments passed to httr::POST.}
 }
 \description{
 Get data from the webservice.

@@ -12,6 +12,7 @@ RoxygenNote: 5.0.1
 Imports:
   dplyr,
   httr,
+  magrittr,
   purrr,
   readr,
   xml2
