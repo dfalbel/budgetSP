@@ -68,10 +68,17 @@ consultaDespesa_body <- function(ano, codigoOrgao = "Consolidado"){
 #'
 #' Parse results from consultaDespesa.
 #'
-#' @param xml as xml document (as defined by xml2::read_xml)
+#' @param xml a xml document (a path to a xml file or a connection returned by
+#' consultaDespesa or a file read by read_xml function)
 #'
 #' @export
 consultaDespesa_parse <- function(xml){
+
+  if(class(xml) == "character"){
+    xml <- read_xml(xml)
+  } else if(class(xml) == "response"){
+    xml <- content(xml, "parsed")
+  }
 
   itens <- xml %>%
     xml_child("soap:Body") %>%
