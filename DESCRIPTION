@@ -3,7 +3,15 @@ Title: Budget Execution from Sao Paulo State
 Version: 0.0.0.9000
 Authors@R: person("Daniel", "Falbel", email = "dfalbel@gmail.com", role = c("aut", "cre"))
 Description: Access data of Budget Execution from Sao Paulo State.
-Depends: R (>= 3.3.1)
+Depends:
+    R (>= 3.3.1)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 5.0.1
+Imports:
+  dplyr,
+  httr,
+  purrr,
+  readr,
+  xml2

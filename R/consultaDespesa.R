@@ -83,17 +83,17 @@ consultaDespesa_body <- function(ano, codigoOrgao = "Consolidado"){
 consultaDespesa_parse <- function(xml){
 
   if(class(xml) == "character"){
-    xml <- read_xml(xml)
+    xml <- xml2::read_xml(xml)
   } else if(class(xml) == "response"){
-    xml <- content(xml, "parsed")
+    xml <- httr::content(xml, "parsed")
   }
 
   itens <- xml %>%
-    xml_child("soap:Body") %>%
-    xml_child("d1:ConsultarDespesasResponse") %>%
-    xml_child("d1:ConsultarDespesasResult") %>%
-    xml_child("d1:ListaItensDespesa") %>%
-    xml_children()
+    xml2::xml_child("soap:Body") %>%
+    xml2::xml_child("d1:ConsultarDespesasResponse") %>%
+    xml2::xml_child("d1:ConsultarDespesasResult") %>%
+    xml2::xml_child("d1:ListaItensDespesa") %>%
+    xml2::xml_children()
 
   fields <- consultaDespesa_fields()
   dados <- purrr::map_df(fields, ~get_child(itens, .x))
@@ -129,7 +129,7 @@ consultaDespesa_fields <- function(){
 #' @param child name of the field to get
 #'
 get_child <- function(itens, child){
-  itens %>% xml_child(sprintf("d1:%s", child)) %>% xml_text()
+  itens %>% xml2::xml_child(sprintf("d1:%s", child)) %>% xml2::xml_text()
 }
 
 #' to_numeric
