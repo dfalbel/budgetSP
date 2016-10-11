@@ -3,6 +3,13 @@
 #' @param ano ano
 #' @param codigoOrgao codigoOrgao
 #'
+#' @examples
+#' \dontrun{
+#' consulta <- consultaDespesa(ano = 2016, codigoOrgao = "42000")
+#' # You can save the result to a xml file using:
+#' consultaDespesa(ano = 2016, codigoOrgao = "42000", httr::write_disk("file.xml"))
+#' }
+#'
 #' @export
 consultaDespesa <- function(ano, codigoOrgao = "Consolidado", ...){
   httr::POST(
