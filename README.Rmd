@@ -1,0 +1,38 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# budgetSP
+
+[![Travis-CI Build Status](https://travis-ci.org/dfalbel/budgetSP.svg?branch=master)](https://travis-ci.org/dfalbel/budgetSP)
+
+## Installation
+
+You can install budgetSP from github with:
+
+```R
+# install.packages("devtools")
+devtools::install_github("dfalbel/budgetSP")
+```
+
+## Using
+
+The simplest use of the package is:
+
+```{r}
+library(budgetSP)
+httr::set_config(httr::config(ssl_verifypeer = 0L))
+consultaDespesa_get(ano = 2016, codigoOrgao = "01000") %>%
+  consultaDespesa_parse()
+```
+
