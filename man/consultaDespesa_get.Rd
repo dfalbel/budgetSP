@@ -4,7 +4,14 @@
 \alias{consultaDespesa_get}
 \title{consultaDespesa Get}
 \usage{
-consultaDespesa_get(ano, codigoOrgao = "Consolidado", ...)
+consultaDespesa_get(ano, codigoOrgao = "Consolidado", ..., codigoUo = "",
+  codigoUnidadeGestora = "", codigoFonteRecursos = "",
+  codigoTipoLicitacao = "", codigoFuncao = "", codigoSubfuncao = "",
+  codigoPrograma = "", codigoAcao = "", codigoFuncionalProgramatica = "",
+  codigoMunicipio = "", codigoCategoria = "", codigoGrupo = "",
+  codigoModalidade = "", codigoElemento = "", naturezaDespesa = "",
+  flagCredor = 0, cgcCpfCredor = "", nomeCredor = "", flagEmpenhado = 1,
+  flagLiquidado = 0, flagPago = 0)
 }
 \arguments{
 \item{ano}{ano}

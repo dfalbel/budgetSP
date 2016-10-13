@@ -14,7 +14,20 @@
 #' }
 #'
 #' @export
-consultaDespesa_get <- function(ano, codigoOrgao = "Consolidado", ...){
+consultaDespesa_get <- function(ano, codigoOrgao = "Consolidado", ...,
+                                codigoUo = "",codigoUnidadeGestora = "",
+                                codigoFonteRecursos = "",
+                                codigoTipoLicitacao = "",
+                                codigoFuncao = "", codigoSubfuncao = "",
+                                codigoPrograma = "", codigoAcao = "",
+                                codigoFuncionalProgramatica = "",
+                                codigoMunicipio = "", codigoCategoria = "",
+                                codigoGrupo = "", codigoModalidade = "",
+                                codigoElemento = "", naturezaDespesa = "",
+                                flagCredor = 0, cgcCpfCredor = "",
+                                nomeCredor = "", flagEmpenhado = 1,
+                                flagLiquidado = 0, flagPago = 0
+                                ){
   httr::POST(
     url = "https://webservices.fazenda.sp.gov.br/WSTransparencia/TransparenciaServico.asmx?",
     httr::add_headers(SOAPAction= "http://fazenda.sp.gov.br/wstransparencia/ConsultarDespesas",
@@ -32,7 +45,20 @@ consultaDespesa_get <- function(ano, codigoOrgao = "Consolidado", ...){
 #' @param ano ano
 #' @param codigoOrgao codigoOrgao
 #'
-consultaDespesa_body <- function(ano, codigoOrgao = "Consolidado"){
+consultaDespesa_body <- function(ano, codigoOrgao = "Consolidado",
+                                 codigoUo = "",codigoUnidadeGestora = "",
+                                 codigoFonteRecursos = "",
+                                 codigoTipoLicitacao = "",
+                                 codigoFuncao = "", codigoSubfuncao = "",
+                                 codigoPrograma = "", codigoAcao = "",
+                                 codigoFuncionalProgramatica = "",
+                                 codigoMunicipio = "", codigoCategoria = "",
+                                 codigoGrupo = "", codigoModalidade = "",
+                                 codigoElemento = "", naturezaDespesa = "",
+                                 flagCredor = 0, cgcCpfCredor = "",
+                                 nomeCredor = "", flagEmpenhado = 1,
+                                 flagLiquidado = 0, flagPago = 0
+                                 ){
   paste0(
     '<?xml version="1.0" encoding="utf-8"?>
     <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
@@ -44,29 +70,29 @@ consultaDespesa_body <- function(ano, codigoOrgao = "Consolidado"){
     </soap:Header>
     <soap:Body>
     <ConsultarDespesas xmlns="http://fazenda.sp.gov.br/wstransparencia">
-    <ano>',ano,'</ano>
-    <codigoOrgao>',codigoOrgao,'</codigoOrgao>
-    <codigoUo></codigoUo>
-    <codigoUnidadeGestora></codigoUnidadeGestora>
-    <codigoFonteRecursos></codigoFonteRecursos>
-    <codigoTipoLicitacao></codigoTipoLicitacao>
-    <codigoFuncao></codigoFuncao>
-    <codigoSubfuncao></codigoSubfuncao>
-    <codigoPrograma></codigoPrograma>
-    <codigoAcao></codigoAcao>
-    <codigoFuncionalProgramatica></codigoFuncionalProgramatica>
-    <codigoMunicipio></codigoMunicipio>
-    <codigoCategoria></codigoCategoria>
-    <codigoGrupo></codigoGrupo>
-    <codigoModalidade></codigoModalidade>
-    <codigoElemento></codigoElemento>
-    <naturezaDespesa></naturezaDespesa>
-    <flagCredor>0</flagCredor>
-    <cgcCpfCredor></cgcCpfCredor>
-    <nomeCredor></nomeCredor>
-    <flagEmpenhado>1</flagEmpenhado>
-    <flagLiquidado>0</flagLiquidado>
-    <flagPago>0</flagPago>
+      <ano>',ano,'</ano>
+      <codigoOrgao>',codigoOrgao,'</codigoOrgao>
+      <codigoUo>',codigoUo,'</codigoUo>
+      <codigoUnidadeGestora>',codigoUnidadeGestora,'</codigoUnidadeGestora>
+      <codigoFonteRecursos>',codigoFonteRecursos,'</codigoFonteRecursos>
+      <codigoTipoLicitacao>',codigoTipoLicitacao,'</codigoTipoLicitacao>
+      <codigoFuncao>',codigoFuncao,'</codigoFuncao>
+      <codigoSubfuncao>',codigoSubfuncao,'</codigoSubfuncao>
+      <codigoPrograma>',codigoPrograma,'</codigoPrograma>
+      <codigoAcao>',codigoAcao,'</codigoAcao>
+      <codigoFuncionalProgramatica>',codigoFuncionalProgramatica,'</codigoFuncionalProgramatica>
+      <codigoMunicipio>',codigoMunicipio,'</codigoMunicipio>
+      <codigoCategoria>',codigoCategoria,'</codigoCategoria>
+      <codigoGrupo>',codigoGrupo,'</codigoGrupo>
+      <codigoModalidade>',codigoModalidade,'</codigoModalidade>
+      <codigoElemento>',codigoElemento,'</codigoElemento>
+      <naturezaDespesa>',naturezaDespesa,'</naturezaDespesa>
+      <flagCredor>',flagCredor,'</flagCredor>
+      <cgcCpfCredor>',cgcCpfCredor,'</cgcCpfCredor>
+      <nomeCredor>',nomeCredor,'</nomeCredor>
+      <flagEmpenhado>',flagEmpenhado,'</flagEmpenhado>
+      <flagLiquidado>',flagLiquidado,'</flagLiquidado>
+      <flagPago>',flagPago,'</flagPago>
     </ConsultarDespesas>
     </soap:Body>
     </soap:Envelope>'

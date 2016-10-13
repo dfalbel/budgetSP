@@ -4,7 +4,14 @@
 \alias{consultaDespesa_body}
 \title{consultaDespesa Body}
 \usage{
-consultaDespesa_body(ano, codigoOrgao = "Consolidado")
+consultaDespesa_body(ano, codigoOrgao = "Consolidado", codigoUo = "",
+  codigoUnidadeGestora = "", codigoFonteRecursos = "",
+  codigoTipoLicitacao = "", codigoFuncao = "", codigoSubfuncao = "",
+  codigoPrograma = "", codigoAcao = "", codigoFuncionalProgramatica = "",
+  codigoMunicipio = "", codigoCategoria = "", codigoGrupo = "",
+  codigoModalidade = "", codigoElemento = "", naturezaDespesa = "",
+  flagCredor = 0, cgcCpfCredor = "", nomeCredor = "", flagEmpenhado = 1,
+  flagLiquidado = 0, flagPago = 0)
 }
 \arguments{
 \item{ano}{ano}
