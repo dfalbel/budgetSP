@@ -1,7 +1,8 @@
 Package: budgetSP
 Title: Budget Execution from Sao Paulo State
 Version: 0.0.0.9000
-Authors@R: person("Daniel", "Falbel", email = "dfalbel@gmail.com", role = c("aut", "cre"))
+Authors@R: c(person("Daniel", "Falbel", email = "dfalbel@gmail.com", role = c("aut", "cre")), 
+    person("José", "de Jesus Filho", email = "jjesusfilho@gmail.com", role = c("aut")))
 Description: Access data of Budget Execution from Sao Paulo State.
 Depends:
     R (>= 3.3.1)
