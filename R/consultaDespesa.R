@@ -24,6 +24,8 @@
 #' @param cgcCpfCredor default: ""
 #' @param nomeCredor default: ""
 #' @param flagEmpenhado default: 1
+#' @param flagLiquidado default: 0
+#' @param flagPago default: 0
 #'
 #' @examples
 #' \dontrun{
@@ -82,6 +84,9 @@ consultaDespesa_get <- function(ano, codigoOrgao = "Consolidado", ...,
 #' @param cgcCpfCredor default: ""
 #' @param nomeCredor default: ""
 #' @param flagEmpenhado default: 1
+#' @param flagLiquidado default: 0
+#' @param flagPago default: 0
+#'
 consultaDespesa_body <- function(ano, codigoOrgao = "Consolidado",
                                  codigoUo = "",codigoUnidadeGestora = "",
                                  codigoFonteRecursos = "",

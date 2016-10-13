@@ -57,6 +57,10 @@ consultaDespesa_get(ano, codigoOrgao = "Consolidado", ..., codigoUo = "",
 \item{nomeCredor}{default: ""}
 
 \item{flagEmpenhado}{default: 1}
+
+\item{flagLiquidado}{default: 0}
+
+\item{flagPago}{default: 0}
 }
 \description{
 Get data from the webservice.

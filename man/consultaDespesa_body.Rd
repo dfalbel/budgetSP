@@ -55,6 +55,10 @@ consultaDespesa_body(ano, codigoOrgao = "Consolidado", codigoUo = "",
 \item{nomeCredor}{default: ""}
 
 \item{flagEmpenhado}{default: 1}
+
+\item{flagLiquidado}{default: 0}
+
+\item{flagPago}{default: 0}
 }
 \description{
 Generates the BODY for the soap request for
