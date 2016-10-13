@@ -19,6 +19,44 @@ consultaDespesa_get(ano, codigoOrgao = "Consolidado", ..., codigoUo = "",
 \item{codigoOrgao}{codigoOrgao}
 
 \item{...}{other arguments passed to httr::POST.}
+
+\item{codigoUo}{default: ""}
+
+\item{codigoUnidadeGestora}{default: ""}
+
+\item{codigoFonteRecursos}{default: ""}
+
+\item{codigoTipoLicitacao}{default: ""}
+
+\item{codigoFuncao}{default: ""}
+
+\item{codigoSubfuncao}{default: ""}
+
+\item{codigoPrograma}{default: ""}
+
+\item{codigoAcao}{default: ""}
+
+\item{codigoFuncionalProgramatica}{default: ""}
+
+\item{codigoMunicipio}{default: ""}
+
+\item{codigoCategoria}{default: ""}
+
+\item{codigoGrupo}{default: ""}
+
+\item{codigoModalidade}{default: ""}
+
+\item{codigoElemento}{default: ""}
+
+\item{naturezaDespesa}{default: ""}
+
+\item{flagCredor}{default: 0}
+
+\item{cgcCpfCredor}{default: ""}
+
+\item{nomeCredor}{default: ""}
+
+\item{flagEmpenhado}{default: 1}
 }
 \description{
 Get data from the webservice.

@@ -5,6 +5,25 @@
 #' @param ano ano
 #' @param codigoOrgao codigoOrgao
 #' @param ... other arguments passed to httr::POST.
+#' @param codigoUo default: ""
+#' @param codigoUnidadeGestora default: ""
+#' @param codigoFonteRecursos default: ""
+#' @param codigoTipoLicitacao default: ""
+#' @param codigoFuncao default: ""
+#' @param codigoSubfuncao default: ""
+#' @param codigoPrograma default: ""
+#' @param codigoAcao default: ""
+#' @param codigoFuncionalProgramatica default: ""
+#' @param codigoMunicipio default: ""
+#' @param codigoCategoria default: ""
+#' @param codigoGrupo default: ""
+#' @param codigoModalidade default: ""
+#' @param codigoElemento default: ""
+#' @param naturezaDespesa default: ""
+#' @param flagCredor default: 0
+#' @param cgcCpfCredor default: ""
+#' @param nomeCredor default: ""
+#' @param flagEmpenhado default: 1
 #'
 #' @examples
 #' \dontrun{
@@ -44,7 +63,25 @@ consultaDespesa_get <- function(ano, codigoOrgao = "Consolidado", ...,
 #'
 #' @param ano ano
 #' @param codigoOrgao codigoOrgao
-#'
+#' @param codigoUo default: ""
+#' @param codigoUnidadeGestora default: ""
+#' @param codigoFonteRecursos default: ""
+#' @param codigoTipoLicitacao default: ""
+#' @param codigoFuncao default: ""
+#' @param codigoSubfuncao default: ""
+#' @param codigoPrograma default: ""
+#' @param codigoAcao default: ""
+#' @param codigoFuncionalProgramatica default: ""
+#' @param codigoMunicipio default: ""
+#' @param codigoCategoria default: ""
+#' @param codigoGrupo default: ""
+#' @param codigoModalidade default: ""
+#' @param codigoElemento default: ""
+#' @param naturezaDespesa default: ""
+#' @param flagCredor default: 0
+#' @param cgcCpfCredor default: ""
+#' @param nomeCredor default: ""
+#' @param flagEmpenhado default: 1
 consultaDespesa_body <- function(ano, codigoOrgao = "Consolidado",
                                  codigoUo = "",codigoUnidadeGestora = "",
                                  codigoFonteRecursos = "",
