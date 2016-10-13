@@ -15,10 +15,10 @@ You can install budgetSP from github with:
 devtools::install_github("dfalbel/budgetSP")
 ```
 
-Using
------
+consultaDespesa
+---------------
 
-The simplest use of the package is:
+This service mimics the *point & click* service that can be accessed [here](https://www.fazenda.sp.gov.br/SigeoLei131/Paginas/FlexConsDespesa.aspx). A technical manual can be found [here](https://github.com/dfalbel/budgetSP/blob/master/inst/WebserviceTransparenciaManual.pdf).
 
 ``` r
 library(budgetSP)
