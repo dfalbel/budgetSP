@@ -27,11 +27,11 @@ consultaDespesa_get <- function(ano, codigoOrgao = "Consolidado", ...,
                                 flagCredor = 0, cgcCpfCredor = "",
                                 nomeCredor = "", flagEmpenhado = 1,
                                 flagLiquidado = 0, flagPago = 0
-                                ){
+){
   httr::POST(
     url = "https://webservices.fazenda.sp.gov.br/WSTransparencia/TransparenciaServico.asmx?",
     httr::add_headers(SOAPAction= "http://fazenda.sp.gov.br/wstransparencia/ConsultarDespesas",
-                Accept = "text/xml",  'Content-Type' = "text/xml; charset=utf-8"),
+                      Accept = "text/xml",  'Content-Type' = "text/xml; charset=utf-8"),
     body = consultaDespesa_body(ano, codigoOrgao),
     ...
   )
@@ -58,7 +58,7 @@ consultaDespesa_body <- function(ano, codigoOrgao = "Consolidado",
                                  flagCredor = 0, cgcCpfCredor = "",
                                  nomeCredor = "", flagEmpenhado = 1,
                                  flagLiquidado = 0, flagPago = 0
-                                 ){
+){
   paste0(
     '<?xml version="1.0" encoding="utf-8"?>
     <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
