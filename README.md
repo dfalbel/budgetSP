@@ -48,3 +48,12 @@ consultaDespesa_get(ano = 2016, codigoOrgao = "01000") %>%
 #> #   ValorEmpenhado <dbl>, ValorLiquidado <dbl>, ValorPago <dbl>,
 #> #   ValorPagoAnosAnteriores <dbl>
 ```
+
+Parameters
+==========
+
+Possible values of parameters are:
+
+-   **ano**: 2010 to 2016
+-   **codigoOrgao**: all possible values [here](https://github.com/dfalbel/budgetSP/blob/master/inst/codigoOrgao.csv)
+-   **codigoUo**: all possible values [here](https://github.com/dfalbel/budgetSP/blob/master/inst/codigoUo.csv)
