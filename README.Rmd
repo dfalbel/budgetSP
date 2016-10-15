@@ -45,3 +45,4 @@ Possible values of parameters are:
 * __ano__: 2010 to 2016
 * __codigoOrgao__: all possible values [here](https://github.com/dfalbel/budgetSP/blob/master/inst/codigoOrgao.csv)
 * __codigoUo__: all possible values [here](https://github.com/dfalbel/budgetSP/blob/master/inst/codigoUo.csv)
+* __codigoUnidadeGestora__: all possible values [here](https://github.com/dfalbel/budgetSP/blob/master/inst/codigoUnidadeGestora.csv)
