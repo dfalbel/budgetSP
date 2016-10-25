@@ -3,7 +3,7 @@
 budgetSP
 ========
 
-[![Travis-CI Build Status](https://travis-ci.org/dfalbel/budgetSP.svg?branch=master)](https://travis-ci.org/dfalbel/budgetSP)
+[![Travis-CI Build Status](https://travis-ci.org/dfalbel/budgetSP.svg?branch=master)](https://travis-ci.org/dfalbel/budgetSP) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/dfalbel/budgetSP?branch=master&svg=true)](https://ci.appveyor.com/project/dfalbel/budgetSP)
 
 Installation
 ------------
